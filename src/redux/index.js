@@ -1,5 +1,8 @@
-import store from "../redux/store/index";
-import { addArticle } from "../redux/actions/index";
+import { combineReducers } from "redux";
 
-window.store = store;
-window.addArticle = addArticle;
+import * as rootReducer from "./reducers";
+
+const AppReducer = combineReducers({
+  rootReducer: rootReducer.rootReducer,
+});
+export default AppReducer;
