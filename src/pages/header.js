@@ -14,31 +14,29 @@ class Header extends Component {
       <div>
         <p>
           <div id="headerLinks" class="row">
-            {/* <img src={hey} alt="logo" style={{width:70,height:70}}/> */}
-
             <div className="headerIcon">
-              <a href="#" className="text-style">
+              <a href="" className="text-style">
                 users{" "}
               </a>
               <img src={group} alt="users" />
             </div>
 
-            <div className="headerIcon">
-              <a href="#" className="text-style">
+            <div>
+              <a href="" className="text-style">
                 order{" "}
               </a>
               <img src={order} alt="order" />
             </div>
 
-            <div className="headerIcon">
-              <a href="#" className="text-style">
+            <div>
+              <a href="" className="text-style">
                 products{" "}
               </a>
               <img src={product} alt="products" />
             </div>
 
-            <div className="headerIcon notification">
-              <a href="#" className="text-style">
+            <div>
+              <a href="" className="text-style">
                 more ...{" "}
               </a>
             </div>

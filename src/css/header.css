@@ -1,9 +1,3 @@
-.text-style {
-  margin-left: 20px;
-  color: black !important;
-  font-weight: bold !important;
-}
-
 .notification {
   margin-right: 70%;
 }
@@ -16,5 +10,15 @@
 }
 
 .notificationProfile {
-  margin-left: 90%;
+  margin-left: 85%;
+}
+
+.text-style {
+  margin-left: 20px;
+  color: black !important;
+  font-weight: bold !important;
+}
+
+.headerIcon {
+  margin-left: 80px;
 }
