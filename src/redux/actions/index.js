@@ -1,38 +1,20 @@
-import {
-  FETCH_PRODUCTS_BEGIN,
-  FETCH_PRODUCTS_SUCCESS,
-  FETCH_PRODUCTS_FAILURE,
-} from "../constants/action-types";
+import { ADD_ARTICLE } from "../constants/action-types";
 
-export function addArticle(payload) {
-    return { type: ADD_ARTICLE, payload }
-  };
+const addArticle = (payload) => {
+  return { type: ADD_ARTICLE, payload };
+};
 
-  export const fetchProducts = (Id) => {
-    return dispatch => {
-      let dataTask = `https://www.googleapis.com/books/v1/volumes?q=book/items/?tId=${Id}`;
-      dispatch(fetchProductsBegin());
-      fetch(dataTask, { method: "GET" })
-        .then(response => response.json())
-        .then(data => {
-          dispatch(fetchProductsSuccess(data));
+export const getData = () => {
+  return (dispatch) => {
+    try {
+      fetch("http://yourApi.com")
+        .then((result) => {
+          dispatch(addArticle(result));
         })
-        .catch(error => dispatch(fetchProductsFailure(error)));
-    };
+        .catch((error) => {
+          console.log(error);
+        });
+    } catch (error) {
+      console.log(error);
+    }
   };
-  
-  const fetchProductsBegin = () => ({
-    type: FETCH_PRODUCTS_BEGIN
-  });
-  
-  const fetchProductsSuccess = products => {
-    return {
-      type: FETCH_PRODUCTS_SUCCESS,
-      payload: products
-    };
-  };
-  
-  const fetchProductsFailure = error => ({
-    type: FETCH_PRODUCTS_FAILURE,
-    payload: error
-  });

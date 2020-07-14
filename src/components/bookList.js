@@ -1,14 +1,13 @@
-import React from 'react';
+import React from "react";
 
 function BookList(props) {
-    const {data} = props;
-    const listItems = data.map((book) =><li>{book}</li>);
-
-    return(
-        <div className='mt-3'>
-            <h3>Top selling products</h3>
-        </div>,
-    <ul>{listItems}</ul>
-    )
+  const { books } = props;
+  const listItems = books.map((book) => (
+    <div className="mt-3">
+      <h3>Top selling {book}</h3>
+    </div>
+  ));
+  return <ul>{listItems}</ul>;
 }
- export default BookList;
+
+export default BookList;

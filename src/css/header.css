@@ -1,24 +1,24 @@
-.notification{
-    margin-right: 70%;
+.notification {
+  margin-right: 70%;
 }
 
-.profile{
-    width: 20%;
-    height: 60%;
-    border-radius: 50%;
-    margin-left: 10px;
+.profile {
+  width: 20%;
+  height: 60%;
+  border-radius: 50%;
+  margin-left: 10px;
 }
 
-.notificationProfile{
-    margin-left: 85%;
+.notificationProfile {
+  margin-left: 85%;
 }
 
 .text-style {
-    margin-left: 20px;
-    color: black !important;
-    font-weight: bold !important;
-  }
+  margin-left: 20px;
+  color: black !important;
+  font-weight: bold !important;
+}
 
-.headerIcon{
-    margin-left: 80px;
-}  
+.headerIcon {
+  margin-left: 80px;
+}
