@@ -1,16 +1,42 @@
-import { ADD_ARTICLE } from "../constants/action-types";
+import {
+    FETCH_PRODUCTS_BEGIN,
+    FETCH_PRODUCTS_SUCCESS,
+    FETCH_PRODUCTS_FAILURE,
+  } from "../constants/action-types";
 
 const initialState = {
-    articles:[]
-};
+    id: 0,
+    items: [],
+    selectedItem : [],
+  };
 
 function rootReducer(state = initialState,action){
-    if(action.type === ADD_ARTICLE){
-        return Object.assign({},state,{
-            articles:state.articles.concat(action.payload)
-        });
-    }
-    return state;
+    switch (action.type) {
+        case FETCH_PRODUCTS_BEGIN:
+        return {
+          ...state,
+          loading: true,
+          error: null,
+          selectedItem:[]
+        };
+  
+      case FETCH_PRODUCTS_SUCCESS:
+        return {
+          ...state,
+          selectedItem: action.payload,
+        };
+  
+      case FETCH_PRODUCTS_FAILURE:
+        return {
+          ...state,
+          loading: false,
+          error: action.payload,
+          items: [],
+          selectedItem: []
+        };
+             default:
+            return state;
+    };
 };
 
 export default rootReducer;

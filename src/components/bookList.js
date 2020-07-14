@@ -1,18 +1,14 @@
-// import React from 'react';
-// import { ReactDOM } from 'react-dom';
+import React from 'react';
 
-// function BookList(props) {
-//     const books = props.books;
-//     const listItems = books.map((book) =>
-//         <li>{book}</li>
-//     );
-//     return(
-//     <ul>{listItems}</ul>
-//     )
-// }
+function BookList(props) {
+    const {data} = props;
+    const listItems = data.map((book) =><li>{book}</li>);
 
-// const books = ["rter","rtert","ryutyu","rqwr","rurj"];
-// ReactDOM.render(
-//     <BookList books={books} />,
-//     document.getElementById('root')
-// );
+    return(
+        <div className='mt-3'>
+            <h3>Top selling products</h3>
+        </div>,
+    <ul>{listItems}</ul>
+    )
+}
+ export default BookList;
