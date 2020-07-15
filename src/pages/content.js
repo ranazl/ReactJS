@@ -25,7 +25,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    getDataAction: (resolve, reject) => {
+      getDataAction: (resolve, reject) => {
       dispatch(getData(resolve, reject));
     },
   };

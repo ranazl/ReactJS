@@ -17,5 +17,5 @@ export const getData = () => {
     } catch (error) {
       console.log(error);
     }
+  }
   };
-};
