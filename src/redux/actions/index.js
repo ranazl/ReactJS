@@ -7,7 +7,7 @@ const addArticle = (payload) => {
 export const getData = () => {
   return (dispatch) => {
     try {
-      fetch("http://yourApi.com")
+      fetch("https://www.googleapis.com/books/v1/volumes?q=book")
         .then((result) => {
           dispatch(addArticle(result));
         })
